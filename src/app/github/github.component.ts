@@ -3,13 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
-  styleUrls: ['./github.component.scss']
+  styleUrls: ['./github.component.scss'],
 })
-export class GithubComponent implements OnInit {
+export class GithubComponent {
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit() {
+    console.log('Github Component Init...');
   }
-
 }

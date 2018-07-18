@@ -5,11 +5,12 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GithubComponent } from './github/github.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    GithubComponent
+    GithubComponent,
   ],
   imports: [
     BrowserModule,
