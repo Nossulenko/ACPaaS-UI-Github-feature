@@ -4,6 +4,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GithubComponent } from './github/github.component';
+import { HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { GithubComponent } from './github/github.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     MDBBootstrapModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
