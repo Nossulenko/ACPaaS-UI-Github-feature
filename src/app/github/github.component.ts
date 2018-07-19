@@ -15,8 +15,8 @@ export class GithubComponent {
 
   constructor(private _githubService: GithubService) {
   }
-  search(){
-    console.log('Github Component Init...');
+  search() {
+    this._githubService.updateUsername(this.username);
     this._githubService.getUserInfo().subscribe(user => {
       this.user = user;
     });
@@ -26,3 +26,4 @@ export class GithubComponent {
     });
   }
 }
+
