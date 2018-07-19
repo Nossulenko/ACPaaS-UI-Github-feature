@@ -11,9 +11,11 @@ export class GithubComponent {
   user: any;
   repos: any;
   noDesc: 'No Description Available';
+  username: string;
 
   constructor(private _githubService: GithubService) {
-
+  }
+  search(){
     console.log('Github Component Init...');
     this._githubService.getUserInfo().subscribe(user => {
       this.user = user;
@@ -21,7 +23,6 @@ export class GithubComponent {
 
     this._githubService.getUserRepoInfo().subscribe(repos => {
       this.repos = repos;
-
     });
   }
 }
