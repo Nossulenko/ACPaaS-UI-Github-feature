@@ -16,7 +16,7 @@ export class GithubService {
       .map(res => res.json());
   }
   getUserRepoInfo() {
-    return this._http.get('https://api.github.com/users/nossulenko/repos')
+    return this._http.get('https://api.github.com/users/' + this.username + '/repos')
       .map(res => res.json());
   }
 }

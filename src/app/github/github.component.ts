@@ -10,6 +10,7 @@ import { GithubService } from '../services/github.service';
 export class GithubComponent {
   user: any;
   repos: any;
+  noDesc: 'No Description Available';
 
   constructor(private _githubService: GithubService) {
 
