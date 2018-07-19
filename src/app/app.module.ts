@@ -6,9 +6,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GithubComponent } from './github/github.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { LoginPageComponent } from './login-page/login-page.component';
 import { LiveEditorComponent } from './live-editor/live-editor.component';
-import { RegisterPageComponent } from './register-page/register-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
@@ -16,9 +16,9 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     AppComponent,
     NavbarComponent,
     GithubComponent,
-    LoginPageComponent,
     LiveEditorComponent,
-    RegisterPageComponent,
+    HomePageComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
