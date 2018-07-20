@@ -5,6 +5,10 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
        <app-github></app-github>
+      <ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="code">
+        <ngx-monaco-diff-editor [options]="options" [originalModel]="originalModel" [modifiedModel]="modifiedModel">
+          </ngx-monaco-diff-editor>
+      </ngx-monaco-editor>
     </div>
   </div>
 </div>

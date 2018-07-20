@@ -8,7 +8,17 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { LiveEditorComponent } from './live-editor/live-editor.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { SigninComponent } from './signin/signin.component';
+import { SigninComponent } from './user/signin/signin.component';
+import { SignupComponent } from './user/signup/signup.component';
+import { UserComponent } from './user/user.component';
+import { UiTesterComponent } from './ui-tester/ui-tester.component';
+import {MonacoEditorModule, NgxMonacoEditorConfig} from 'ngx-monaco-editor';
+
+const monacoConfig: NgxMonacoEditorConfig = {
+  baseUrl: 'app-name/assets', // configure base path for monaco editor
+  defaultOptions: { scrollBeyondLastLine: false }, // pass default options to be used
+  onMonacoLoad: () => { console.log((<any>window).monaco); } // here monaco object will be available as window.monaco use this function to extend monaco editor functionality.
+};
 
 
 @NgModule({
@@ -19,11 +29,15 @@ import { SigninComponent } from './signin/signin.component';
     LiveEditorComponent,
     HomePageComponent,
     SigninComponent,
+    SignupComponent,
+    UserComponent,
+    UiTesterComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     MDBBootstrapModule.forRoot(),
+    MonacoEditorModule.forRoot(monacoConfig),
     FormsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],

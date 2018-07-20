@@ -67,4 +67,41 @@
 
     </div>
   </div>
+<br>
+<div class="card">
+  <div class="card-header">
+    <h4>Closed Issues</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor="let repo of repos">
+          <div class="row">
+            <div class="col-md-9">
+              <h4><a href="{{repo.clone_url}}" target="_blank">{{repo.name}}</a></h4>
+              <p *ngIf="true;else noDesc">{{repo.description}}</p>
+            </div>
+            <div class="col-md-3">
+              <span class="badge badge-pill badge-primary">{{repo.watchers}} Watchers</span>
+              <span class="badge badge-pill badge-secondary">{{repo.forks}} Forks</span>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-header">
+    <h4>ACPaaS UI tester</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <app-live-editor></app-live-editor>
+    </div>
+  </div>
+</div>
 
