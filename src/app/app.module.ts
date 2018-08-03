@@ -12,6 +12,7 @@ import { SigninComponent } from './user/signin/signin.component';
 import { SignupComponent } from './user/signup/signup.component';
 import { UserComponent } from './user/user.component';
 import { UiTesterComponent } from './ui-tester/ui-tester.component';
+import { routing, appRoutingProviders} from './app.routes';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { UiTesterComponent } from './ui-tester/ui-tester.component';
     BrowserModule,
     HttpModule,
     MDBBootstrapModule.forRoot(),
-    FormsModule
+    FormsModule,
+    routing,
+    appRoutingProviders
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
